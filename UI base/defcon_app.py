@@ -21,7 +21,7 @@ import os
 app = Flask(__name__)
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 @app.route("/")
 def home():
@@ -48,7 +48,7 @@ def main():
             print("Query:","Write questions based on the text below\n\nText:"+contract+"\n\nQuestions:\n"+question+"\n\nAnswer:\n1.")
             response = openai.Completion.create(
                                                 engine="davinci-instruct-beta",
-                                                prompt=f"Write questions based on the text below\n\nText:{contract}\n\nQuestions:\n{question}\n\nAnswer:\n1.",
+                                                prompt=f"Get answer based on the question\n\nText:{contract}\n\nQuestions:\n{question}\n\nAnswer:\n1.",
                                                 temperature=0,
                                                 max_tokens=257,
                                                 top_p=1,
