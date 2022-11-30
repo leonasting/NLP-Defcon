@@ -20,8 +20,14 @@ import os
 #fig.show()
 app = Flask(__name__)
 import openai
+import urllib.parse
+import requests
+import time
 
 openai.api_key = "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"
+MAX_RETRIES = 25
+api_token = "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"
+headers = {"Authorization": "Bearer " + api_token}
 
 @app.route("/")
 def home():
@@ -35,16 +41,18 @@ def main():
         contract= request.form["Contract"]
         question= request.form["question"]
         option= request.form["option"]
+        model = request.form["models"]
         #print("wowo"+nd)
 
         print("Contract:",contract)
         print("question:",question)
+        print("Model", model)
 
 
         #sentence=nd
         #new_grid=GridPOMDP(int(side.strip()),int(bomb.strip()),start=[int(i) for i in start.split(',')],goal=[int(i) for i in goal.split(',')])
         #new_grid.add_bomb()
-        if option=="Fetch Answers":
+        if option=="Fetch Answers" and model == "gpt":
             print("Query:","Write questions based on the text below\n\nText:"+contract+"\n\nQuestions:\n"+question+"\n\nAnswer:\n1.")
             response = openai.Completion.create(
                                                 engine="davinci-instruct-beta",
@@ -58,15 +66,52 @@ def main():
             ans =  response['choices'][0]['text']
             print("response",response)
             print("ans",ans)
-            #new_grid.q_learning()
-            #df=new_grid.display_path()
-            #q_reward=[i for i in new_grid.ls_reward]
-            #print(q_reward)
-            #new_grid.reset_q_val()
-
-
-
             return render_template("label.html",answer=ans)#,table2=df2.to_html(classes='data'),url ='./static/images/new_plot2.png')
+        elif option =="Fetch Answers" and model == "roberta":
+            retries = 0
+            query = dict(question=question, context=contract)
+            model_url = "https://api-inference.huggingface.co/models/deepset/roberta-base-squad2"
+            while retries < MAX_RETRIES:
+                retries += 1
+                r = requests.post(model_url, json=query, headers=headers)
+                if r.status_code == 503:
+                # We'll retry
+                # If running under asyncio, be sure to use
+                # `await asyncio.sleep(1)` instead.
+                #logger.info("Model is currently loading")
+                    time.sleep(1)
+            ans = r.text
+            return render_template("label.html",answer=ans)
+        elif option =="Fetch Answers" and model == "distilbert":
+            retries = 0
+            query = dict(question=question, context=contract)
+            model_url = "https://api-inference.huggingface.co/models/distilbert-base-cased-distilled-squad"
+            while retries < MAX_RETRIES:
+                retries += 1
+                r = requests.post(model_url, json=query, headers=headers)
+                if r.status_code == 503:
+                # We'll retry
+                # If running under asyncio, be sure to use
+                # `await asyncio.sleep(1)` instead.
+                #logger.info("Model is currently loading")
+                    time.sleep(1)
+            ans = r.text
+            return render_template("label.html",answer=ans)
+        elif option =="Fetch Answers" and model == "bert":
+            retries = 0
+            query = dict(question=question, context=contract)
+            model_url = "https://api-inference.huggingface.co/models/deepset/bert-base-cased-squad2"
+            while retries < MAX_RETRIES:
+                retries += 1
+                r = requests.post(model_url, json=query, headers=headers)
+                if r.status_code == 503:
+                # We'll retry
+                # If running under asyncio, be sure to use
+                # `await asyncio.sleep(1)` instead.
+                #logger.info("Model is currently loading")
+                    time.sleep(1)
+            ans = r.text
+            return render_template("label.html",answer=ans)
     else:
         return render_template("main_1.html")
 
