@@ -24,9 +24,9 @@ import urllib.parse
 import requests
 import time
 
-openai.api_key = "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"
+openai.api_key = "xxxxxx"
 MAX_RETRIES = 25
-api_token = "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"
+api_token = "xxxx"
 headers = {"Authorization": "Bearer " + api_token}
 
 @app.route("/")

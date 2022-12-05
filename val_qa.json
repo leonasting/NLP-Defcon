@@ -1,0 +1,34 @@
+[
+  {
+    "para_id": "art_3178203_para_1",
+    "content": "Lockheed Martin Corp., Manassas, Virginia (N0001922D0017 P00001); Undersea Sensor Systems Inc., Columbia City, Indiana (N0001922D0018 P00001); and Sparton De Leon Springs, LLC. De Leon Springs, Florida (N0001922D0019 P00001) are awarded an estimated aggregate ceiling of $5,100,000,000 for firm-fixed-price modifications to a previously awarded indefinite-delivery/indefinite-quantity contract. These modifications exercise options for the production and delivery of the following sonobuoy capability categories: bathythermograph, passive, active/passive combo, multistatic source, multistatic receiver, and special mission in support of annual training, peacetime operations and testing expenditures, as well as, to maintain sufficient inventory to support the execution of Major Combat Operations based on Naval Munitions Requirements Process. The companies have an opportunity to compete for individual orders.  Lockheed Martin Corp. will perform work in Manassas, Virginia; Undersea Sensor Systems Inc. will perform work in Columbia City, Indiana, while Sparton De Leon Springs, LLC will perform work in De Leon Springs, Florida, and is expected to be completed in September 2027. No funds will be obligated at the time of award. Funds will be obligated on individual orders as they are issued. The Naval Air Systems Command, Patuxent River, Maryland, is the contracting activity.",
+    "category": "Navy",
+    "publish_date_ap": "Oct. 3, 2022",
+    "context": "Navy\n\nLockheed Martin Corp., Manassas, Virginia (N0001922D0017 P00001); Undersea Sensor Systems Inc., Columbia City, Indiana (N0001922D0018 P00001); and Sparton De Leon Springs, LLC. De Leon Springs, Florida (N0001922D0019 P00001) are awarded an estimated aggregate ceiling of $5,100,000,000 for firm-fixed-price modifications to a previously awarded indefinite-delivery/indefinite-quantity contract. These modifications exercise options for the production and delivery of the following sonobuoy capability categories: bathythermograph, passive, active/passive combo, multistatic source, multistatic receiver, and special mission in support of annual training, peacetime operations and testing expenditures, as well as, to maintain sufficient inventory to support the execution of Major Combat Operations based on Naval Munitions Requirements Process. The companies have an opportunity to compete for individual orders. Lockheed Martin Corp. will perform work in Manassas, Virginia; Undersea Sensor Systems Inc. will perform work in Columbia City, Indiana, while Sparton De Leon Springs, LLC will perform work in De Leon Springs, Florida, and is expected to be completed in September 2027. No funds will be obligated at the time of award. Funds will be obligated on individual orders as they are issued. The Naval Air Systems Command, Patuxent River, Maryland, is the contracting activity.",
+    "questions":
+    [{"input_text": "What is the estimated aggregate ceiling for this contract?", "id" : 1},
+     {"input_text": "What is the estimated completion date for this contract?", "id": 2},
+     {"input_text": "What is the name of the company that will be performing work in Manassas, Virginia?", "id": 3}],
+    "answers":
+     [{"id":1, "input_text": "The estimated aggregate ceiling for this contract is $5,100,000,000", "start":249 ,"end": 294 },
+     {"id": 2, "input_text": "The estimated completion date for this contract is September 2027.", "start":1150 , "end": 1192},
+     {"id": 3, "input_text": "Lockheed Martin Corp. will be performing work in Manassas, Virginia.", "start":9 , "end": 50}]
+  },
+  {
+    "para_id": "art_3178203_para_2",
+    "content": "General Dynamics Electric Boat Corp., Groton, Connecticut, is awarded a $532,921,125 cost-plus-fixed-fee modification to previously awarded contract (N00024-20-C-2120) for Lead Yard Support and Development Studies and Design efforts related to Virginia-class submarines. This contract modification includes options which, if exercised, would bring the cumulative value of the modification to $813,720,300. Work will be performed in Groton, Connecticut (99%) and Newport News, Virginia (1%), and is expected to be completed by October 2023. Fiscal 2022 research, development, test, and evaluation (Navy) $96,759,178 (89%); fiscal 2022 shipbuilding and conversion (Navy) $8,449,061 (7%); fiscal 2019 shipbuilding and conversion (Navy) $2,001,990 (2%); fiscal 2020 shipbuilding and conversion (Navy) $1,223,913 (1%); fiscal 2017 shipbuilding and conversion (Navy) $720,000 (1%); and fiscal 2021 shipbuilding and conversion (Navy) $70,000 (1%), will be obligated at time of award, of which, $96,759,178 will expire at the end of the current fiscal year. The Naval Sea Systems Command, Washington, District of Columbia, is the contracting activity.",
+    "category": "Navy",
+    "publish_date_ap": "Oct. 3, 2022",
+    "context": "Navy\n\nGeneral Dynamics Electric Boat Corp., Groton, Connecticut, is awarded a $532,921,125 cost-plus-fixed-fee modification to previously awarded contract (N00024-20-C-2120) for Lead Yard Support and Development Studies and Design efforts related to Virginia-class submarines. This contract modification includes options which, if exercised, would bring the cumulative value of the modification to $813,720,300. Work will be performed in Groton, Connecticut (99%) and Newport News, Virginia (1%), and is expected to be completed by October 2023. Fiscal 2022 research, development, test, and evaluation (Navy) $96,759,178 (89%); fiscal 2022 shipbuilding and conversion (Navy) $8,449,061 (7%); fiscal 2019 shipbuilding and conversion (Navy) $2,001,990 (2%); fiscal 2020 shipbuilding and conversion (Navy) $1,223,913 (1%); fiscal 2017 shipbuilding and conversion (Navy) $720,000 (1%); and fiscal 2021 shipbuilding and conversion (Navy) $70,000 (1%), will be obligated at time of award, of which, $96,759,178 will expire at the end of the current fiscal year. The Naval Sea Systems Command, Washington, District of Columbia, is the contracting activity.",
+    "questions": 
+    [{"id": 1, "input_text": "What is the name of the company that is awarded the contract?"},
+    {"id": 2, "input_text": "What is the name of the contract?"},
+    {"id": 3, "input_text": "What is the total value of the contract?"},
+    {"id": 4, "input_text": "What is the expected completion date of the contract?"}],
+    "answers": 
+    [{"id":1, "input_text": "General Dynamics Electric Boat Corp.", "start":9 , "end":45 },
+    {"id": 2, "input_text": "The contract is called Lead Yard Support and Development Studies and Design efforts related to Virginia-class submarines." , "start":181 , "end":279 },
+    {"id": 3, "input_text": "The total value of the contract is $532,921,125.", "start":81, "end":93 },
+    {"id":4, "input_text": "The expected completion date of the contract is October 2023.", "start":507, "end": 547
+  }]}
+]
