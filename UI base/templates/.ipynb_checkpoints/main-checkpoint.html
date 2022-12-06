@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}DEfence Contract Context QUestion Answer{% endblock %}
+
+{% block content %}
+<form action="#" method="post">
+	<p style="margin-left: 50px;">Please Provide Input</p>
+	<!-- <p><input type="text" name="nm" /></p> -->
+	<p style="margin-left: 50px;">
+	Contract details:
+	<textarea id="Contract" name="Contract" rows="4" cols="50">
+	Work Under Process
+	</textarea>
+	<!--<input type="text" name="Contract " style="margin-left: 50px;"/>-->
+	<br>
+	<br>
+
+	 <p style="margin-left: 50px;">Question:<input type="text" name="question" style="margin-left: 50px;"/></p>
+	<br>
+	<p style="margin-left: 50px;">
+	<label for="models">Choose a Model:</label>
+
+	<select name="models" id="models">
+  	<option value="gpt">GPT-3</option>
+  	<option value="bert">BERT</option>
+  	<option value="roberta">Roberta</option>
+  	<option value="distilbert">Distilbert</option>
+	</select>
+</p>
+	<p><input type="submit" name="option" value="Fetch Answers" style="margin-left: 50px;" /></p>
+</form>
+{% endblock %}
