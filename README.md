@@ -53,3 +53,17 @@ NLP-Defcon/
 └── README.md
 
 ```
+
+## About our code implementation.
+
+### Scripts:
+  
+  1. Data Scrapper- Used to web scrape from provided url
+  2. Data Processes - Data Processing over the scrapped data
+  4. BERT - Takes manually created data for fine tuning the model and  checking accuracy over predifined question set.
+  
+  Note:
+  3-7 Are separate impelmentation of different models to check their accuracy
+ 
+ ### UI Base
+  Contains the UI implementaion.
